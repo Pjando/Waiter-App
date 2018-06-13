@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@drawable/custom_border">
+
+  <TextView
+      android:id="@+id/id"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_margin="@dimen/text_margin"
+      android:textAppearance="?attr/textAppearanceListItem"
+      android:gravity="center"
+      android:textSize="20sp"/>
+
+  <TextView
+      android:id="@+id/content"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_margin="@dimen/text_margin"
+      android:textAppearance="?attr/textAppearanceListItem"
+      android:gravity="center"
+      android:textSize="20sp"/>
+  <TextView
+      android:id="@+id/quantity"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:layout_margin="@dimen/text_margin"
+      android:textAppearance="?attr/textAppearanceListItem"
+      android:gravity="center"
+      android:textSize="20sp"/>
+
+  <Button
+      android:id="@+id/minus"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:text="@string/minus"
+      android:textSize="20sp"
+      android:textColor="#ff0000"
+      android:paddingEnd="10dp"/>
+
+  <Button
+      android:id="@+id/plus"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:text="@string/plus"
+      android:textSize="20sp"
+      android:textColor="#00ff00"/>
+</LinearLayout>

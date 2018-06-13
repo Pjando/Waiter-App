@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/detailsTable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:background="@drawable/custom_border"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/food"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="@string/food"
+                            android:textColor="#000000"
+                            android:textSize="28sp" />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="@string/price"
+                            android:textColor="#000000"
+                            android:textSize="28sp" />
+
+                        <TextView
+                            android:id="@+id/quantity"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="@string/quantity"
+                            android:textColor="#000000"
+                            android:textSize="28sp" />
+                    </TableRow>
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/custom_border">
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:text="@string/change_status_of_order" />
+                    <Spinner
+                        android:id="@+id/status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                    </Spinner>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="10dp">
+            <Button
+                android:id="@+id/cancelOrder"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="@string/cancel_order"/>
+            <Button
+                android:id="@+id/editOrder"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="@string/remove_items"/>
+            <Button
+                android:id="@+id/addItems"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="@string/add_items"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8">
+            <com.ebanx.swipebtn.SwipeButton
+                android:id="@+id/confirmOrder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom"
+                app:inner_text="Send to Kitchen"
+                app:inner_text_color="@android:color/white"
+                app:inner_text_size="16sp"
+                app:inner_text_bottom_padding="18dp"
+                app:inner_text_top_padding="18dp"
+                app:inner_text_background="@drawable/shape_rounded"
+                app:button_image_disabled="@drawable/ic_menu_send"
+                app:button_image_enabled="@drawable/ic_check_box_black_24dp"
+                app:button_left_padding="20dp"
+                app:button_right_padding="20dp"
+                app:button_top_padding="20dp"
+                app:button_bottom_padding="20dp"
+                app:button_background="@drawable/shape_button"/>
+        </LinearLayout>
+
+        <!--<android.support.design.widget.FloatingActionButton
+            android:id="@+id/confirmOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:srcCompat="@android:drawable/ic_menu_send" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/cancelOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/fab_margin"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/editOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_margin="@dimen/fab_margin"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addItems"
+            android:layout_width="wrap_content"
+            android:layout_height="76dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/fab_margin"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:layout_anchor="@+id/layout1"
+            app:layout_anchorGravity="bottom|center"
+            app:srcCompat="@android:drawable/ic_menu_add" />-->
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
