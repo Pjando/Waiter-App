@@ -25,6 +25,6 @@ Client has opportunity to:
 
 Kitchen automatically receives orders and places them in sections according to type of meal. Kitchen should change status of order to "Cooking" when preparing the meal and "Ready" when the waiter needs to collect the meal.
 
-#### Waitor app:
+#### Waiter app:
 
 The waiter app is the main source of communication betweent the kitchen and the client. The waiter can confirm customer orders and in doing so can edit, add or delete items from the order. The waiter can also set what is available on the menu taking items off due to lack of stock.
